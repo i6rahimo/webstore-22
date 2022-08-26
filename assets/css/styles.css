@@ -253,15 +253,9 @@ button {
   text-transform: uppercase;
   margin: 50px 0 30px;
 }
-.swiper {
-  position: relative;
-  width: 1170px;
-  max-width: 100%;
-  height: 209px;
-}
 .swiper-button-prev {
   width: 60px;
-  height: 218px;
+  height: 235px;
   background: linear-gradient(92.83deg, #885FFF 0%, #BB65FF 100%);
   top:0;
   left: 0;
@@ -269,15 +263,123 @@ button {
 }
 .swiper-button-next {
   width: 60px;
-  height: 218px;
+  height: 235px;
   background: linear-gradient(92.83deg, #885FFF 0%, #BB65FF 100%);
   top:0;
   right: 0;
   bottom: 0;
 }
-/*=============== BUTTON ===============*/
+.swiper-button-next::after {
+  content: url('/assets/img/arrow2.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.swiper-button-prev::after {
+  content: url('/assets/img/arrow1.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-
+.portfolio-swiper {
+  overflow: hidden;
+  position: relative;
+  width: 1170px;
+  max-width: 100%;
+}
+.portfolio-wrapper {
+  display: flex;
+  width: 100%;
+  height: 209px;
+  max-height: 100%;
+}
+.portfolio-slide {
+  flex-shrink: 0;
+  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.10);
+}
+.portfolio-slide img {
+  height: 209px;
+}
+.graph-design {
+  margin: 130px 0 30px;
+}
+/*=============== SERVICES ===============*/
+.services {
+  margin: 0 0 80px;
+}
+.services__title {
+  text-transform: uppercase;
+  font-size: var(--h1-font-size);
+  color: var(--first-color);
+}
+.services__subtitle {
+  text-transform: uppercase;
+  font-size: var(--h2-font-size);
+  color: var(--first-color);
+  margin: 50px 0 30px;
+}
+.services__items {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.services__item {
+  position: relative;
+  width: 370px;
+  max-width: 100%;
+  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.10);
+  border-radius: 5px;
+}
+.services__item-title {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-bold);
+  text-align: center;
+  text-transform: uppercase;
+  margin: 10px 0 30px;
+}
+.services__item-items {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+  margin: 0 0 30px 22px;
+}
+.item-text {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: var(--small-font-size);
+  color: var(--first-color);
+  text-transform: uppercase;
+}
+.item-text::before {
+  content: '';
+  display: block;
+  border-radius: 50px;
+  width: 14px;
+  height: 14px;
+  background: linear-gradient(135deg, #546FFF 0%, #9D50FF 100%);
+}
+.services__item-price {
+  font-size: 18px;
+  color: var(--first-color);
+  font-weight: 400;
+  margin: 0 0 15px 22px;
+}
+.services__item-btn {
+  cursor: pointer;
+  width: 100%;
+  padding: 12px 0;
+  background: linear-gradient(135deg, #546FFF 0%, #9D50FF 100%);
+border-radius: 0px 0px 5px 5px;
+}
+.item-business {
+  gap: 10px;
+  margin: 0 0 10px 22px;
+}
+.business-title {
+  margin: 10px 0 15px;
+}
 /*=============== LOGOS ===============*/
 
 

@@ -2,10 +2,12 @@
 
 
 /*=============== SWIPER POPULAR ===============*/
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('.portfolio-swiper', {
     // Optional parameters
     direction: 'horizontal',
     loop: true,
+    slideClass: 'portfolio-slide',
+    wrapperClass: 'portfolio-wrapper',
     spaceBetween: 30,
     slidesPerView: 3,
   
