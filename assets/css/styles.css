@@ -163,6 +163,7 @@ button {
   max-width: 100%;
 }
 .home__text-title {
+  text-transform: uppercase;
   color: var(--second-color);
   font-size: var(--h1-font-size);
 }
@@ -310,12 +311,12 @@ button {
 }
 .services__title {
   text-transform: uppercase;
-  font-size: var(--h1-font-size);
+  font-size: var(--h2-font-size);
   color: var(--first-color);
 }
 .services__subtitle {
   text-transform: uppercase;
-  font-size: var(--h2-font-size);
+  font-size: 20px;
   color: var(--first-color);
   margin: 50px 0 30px;
 }
@@ -447,6 +448,9 @@ button {
   text-align: center;
   cursor: pointer;
 }
+.item-more {
+  text-transform: uppercase;
+}
 .order__item-more img {
   width: 49px;
   height: 20px;
@@ -472,6 +476,7 @@ button {
 .about__content {
   display: flex;
   align-items: center;
+  margin: 0 0 55px;
 }
 .about__text-title {
   font-size: 20px;
@@ -509,12 +514,109 @@ button {
   transition: width .3s ease;
   transition: height .3s ease;
 }
-/* Swiper class */
+.about__work {
+  margin: 0 0 80px;
+}
+
+.about__work-title {
+  font-size: 20px;
+  color: var(--first-color);
+  text-transform: uppercase;
+  margin: 0 0 50px;
+}
+.about__step-up {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.about__step-wrapper {
+  display: flex;
+  flex-direction: column;
 
 
-/*=============== VALUE ===============*/
-
-
+}
+.about__step {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 91px;
+  height: 91px;
+  border-radius: 50%;
+  background: var(--second-color);
+  transition: background .3s ease;
+  /* margin:  0 0 10px; */
+}
+.about__step:hover {
+  background: linear-gradient(135deg, #546FFF 0%, #9D50FF 100%);
+}
+.about__step:hover .about__step-number {
+  color: var(--second-color);
+  transition: color .3s ease;
+}
+.about__step::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    margin: -1px; 
+    border-radius: inherit; 
+    background: linear-gradient(135deg, #546FFF 0%, #9D50FF 100%);
+}
+.about__step-number {
+  font-size: var(--h1-font-size);
+  font-weight: var(--font-bold);
+  color:  #546FFF ;
+}
+.about__step-text {
+  text-align: center;
+  font-size: var(--normal-font-size);
+  color: #546FFF;
+  text-transform: uppercase;
+  font-weight: var(--font-bold);
+  margin: 10px 0 0;
+}
+.about__step-line {
+  position: absolute;
+  width: 1072px;
+  max-width: 100%;
+  height: 1px;
+  background: linear-gradient(135deg, #546FFF 0%, #9D50FF 100%);
+  margin: 0 0 30px 9px;
+}
+/*=============== REVIEW ===============*/
+.review {
+  margin: 0 0 50px;
+}
+.review__title {
+  margin: 0 0 50px;
+}
+.review-slide {
+  padding: 30px;
+  position: relative;
+}
+.review-slide_text {
+  font-weight: 400;
+  font-size: var(--small-font-size);
+  font-weight: var(--font-regular);
+  line-height: 15px;
+letter-spacing: 0.1em;
+}
+.review-slide_name {
+  font-weight: var(--font-bold);
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+}
+.review__btn {
+  font-size: var(--normal-font-size);
+  width: 270px;
+  max-width: 100%;
+  padding: 20px 0;
+  background: linear-gradient(92.83deg, #885FFF 0%, #BB65FF 100%);
+  margin: 100px 0 0;
+  cursor: pointer;
+}
 /*Rotate icon and add shadows*/
 
 
