@@ -321,53 +321,119 @@
                 <div class="contact__wrapper">
                     <address class="contact__address">
                         <div class="contact__address-phone">
-                            <p>Контактный номер</p>
+                            <p class="input-text">Контактный номер</p>
                             <a href="tel:+89009990000">8 (900)-999-00-00</a>
                         </div>
                         <div class="contact__address-email">
-                            <p>e-mail</p>
+                            <p class="input-text">e-mail</p>
                             <a href="mailto:webstoresitemarket@gmmail.com">webstoresitemarket@gmmail.com</a>
                         </div>
                         <div class="contact__address-social">
-                            <p>соц.сети</p>
+                            <p class="input-text">соц.сети</p>
                             <div class="address__social-wrapper">
-                                <img src="/assets/img/blueicon-vk.svg" alt="Вконтакте">
-                                <img src="/assets/img/blueicon-youtube.svg" alt="Ютубе">
-                                <img src="/assets/img/blueicon-telegram.svg" alt="Телеграм">
+                                <a href=""><img src="/assets/img/blueicon-vk.svg" alt="Вконтакте"></a>
+                                <a href=""><img src="/assets/img/blueicon-youtube.svg" alt="Ютубе"></a>
+                                <a href=""><img src="/assets/img/blueicon-telegram.svg" alt="Телеграм"></a>
                             </div>
                         </div>
                     </address>
                     <form action="" class="contact__form">
                         <p class="contact__form-title">Заполните форму для заказа обратного звонка</p>
+                        <div class="contact__form-wrapper">
                         <div class="contact__form-left">
-                            <label class="input-text" for="">Имя</label>
-                            <input class="input" type="text">
-                            <label class="input-text" for="">e-mail</label>
-                            <input class="input" type="email" placeholder="">
-                            <label class="input-text" for="">Номер телефона</label>
-                            <input class="input" type="tel">
+                            <div class="contact__form-group">
+                                <label class="input-text" for="">Имя</label>
+                                <input class="input" type="text" placeholder="Владислав">
+                            </div>
+                            <div class="contact__form-group">
+                                <label class="input-text" for="">e-mail</label>
+                                <input class="input" type="email" placeholder="webstoresitemarket@gmail.com">
+                            </div>
+                            <div class="contact__form-group">
+                                <label class="input-text" for="">Номер телефона</label>
+                                <input class="input" type="tel" placeholder="8 (900)-999-00-00">
+                            </div>
                         </div>
                         <div class="contact__form-right">
                             <div class="contact__form-choose">
-                                <p>Предмет звонка</p>
-                                <input type="checkbox" name="" id="">
-                                <label for="">Обсудить заказ</label>
-                                <input type="checkbox" name="" id="">
-                                <label for="">Консультация</label>
+                                <p class="input-text">Предмет звонка</p>
+                                <div class="choose__group-wrapper">
+                                    <div class="choose__group">
+                                        <label class="check option">
+                                            <input class="check__input" type="checkbox">
+                                            <span class="check__box"></span>
+                                            Обсудить заказ
+                                        </label>
+                                    </div>
+                                    <div class="choose__group">
+                                        <label class="check option">
+                                            <input class="check__input" type="checkbox" checked>
+                                            <span class="check__box"></span>
+                                            Консультация
+                                        </label>
+                                </div>
+                            </div>
                             </div>
                             <div class="contact__form-comment">
-                                <p>Комментарий к звонку</p>
-                                <textarea name="" id="" cols="30" rows="10"></textarea>
+                                <p class="input-text">Комментарий к звонку</p>
+                                <textarea name="" id="" cols="30" rows="11"></textarea>
                             </div>
                         </div>
-                        <button class="btn contact__form-btn">Заказать звонок</button>
+                    </div>
+                    <button class="btn contact__form-btn">Заказать звонок</button>
                     </form>
                 </div>
             </div>
         </section>
+        <section class="partners">
+            <div class="container">
+                <h1 class="partners__title">Партнеры</h1>
+                <div class="partners__img">
+                    <img src="/assets/img/par1.svg" alt="Партнеры">
+                    <img src="/assets/img/par2.svg" alt="Партнеры">
+                    <img src="/assets/img/par3.svg" alt="Партнеры">
+                </div>
+            </div>
+        </section>
         <!--==================== FOOTER ====================-->
-        <footer class="footer section">
-            
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__wrapper">
+
+                    <a class="footer__logo" href="#"><img src="/assets/img/logo.svg" alt="Лого"></a>
+                    <nav class="header__nav footer__nav">
+                        <ul class="header__ul">
+                        <li class="header__li">
+                            <a href="#" class="header__link">Портфолио</a>
+                        </li>
+                        <li class="header__li">
+                            <a href="#" class="header__link">Услуги</a>
+                        </li>
+                        <li class="header__li">
+                            <a href="#" class="header__link">О нас</a>
+                        </li>
+                        <li class="header__li">
+                            <a href="#" class="header__link">Отзывы</a>
+                        </li>
+                        <li class="header__li">
+                            <a href="#" class="header__link">Контакты</a>
+                        </li>
+                        <li class="header__li">
+                            <a href="#" class="header__link">Партнеры</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="footer__items">
+                    <p class="footer__items-briph">Бриф на разработку сайта</p>
+                    <div class="footer__items-icon">
+                        <a href=""><img src="/assets/img/blueicon-vk.svg" alt="Вконтакте"></a>
+                        <a href=""><img src="/assets/img/blueicon-youtube.svg" alt="Ютуб"></a>
+                        <a href=""><img src="/assets/img/blueicon-telegram.svg" alt="Телеграм"></a>
+                    </div>
+                    <a href="#" class="footer__items-politic">Политика конфидициальности</a>
+                </div>
+            </div>
+            </div>
         </footer>
 
 
