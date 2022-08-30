@@ -25,33 +25,60 @@
                 <nav class="header__nav">
                     <ul class="header__ul">
                         <li class="header__li">
-                            <a href="#" class="header__link">Портфолио</a>
+                            <a href="#portfolio" class="header__link">Портфолио</a>
                         </li>
                         <li class="header__li">
-                            <a href="#" class="header__link">Услуги</a>
+                            <a href="#services" class="header__link">Услуги</a>
                         </li>
                         <li class="header__li">
-                            <a href="#" class="header__link">О нас</a>
+                            <a href="#about" class="header__link">О нас</a>
                         </li>
                         <li class="header__li">
                             <a href="#" class="header__logo"><img src="/assets/img/logo.svg" alt="logo"></a>
                         </li>
                         <li class="header__li">
-                            <a href="#" class="header__link">Отзывы</a>
+                            <a href="#review" class="header__link">Отзывы</a>
                         </li>
                         <li class="header__li">
-                            <a href="#" class="header__link">Контакты</a>
+                            <a href="#contact" class="header__link">Контакты</a>
                         </li>
                         <li class="header__li">
-                            <a href="#" class="header__link">Партнеры</a>
+                            <a href="#partners" class="header__link">Партнеры</a>
                         </li>
                     </ul>
                 </nav>
             </div>
         </header>
+        
 
         <!--==================== MAIN ====================-->
         <main class="main">
+            <div class="home__popup">
+    
+                <div class="home__popup-wrapper">
+                    <form action="" class="contact__form header__popup-form">
+                        <p class="contact__form-title">заполните форму ДЛЯ ПОДАЧИ ЗАЯВКИ НА РАЗРАБОТКУ САЙТА</p>
+                            <div class="header__popup-wrapper">
+                                <div class="contact__form-group">
+                                    <label class="input-text" for="">Имя</label>
+                                    <input class="input header__input" type="text" placeholder="Владислав">
+                                </div>
+                                <div class="contact__form-group">
+                                    <label class="input-text" for="">e-mail</label>
+                                    <input class="input header__input" type="email" placeholder="webstoresitemarket@gmail.com">
+                                </div>
+                                <div class="contact__form-group">
+                                    <label class="input-text" for="">Номер телефона</label>
+                                    <input class="input header__input" type="tel" placeholder="8 (900)-999-00-00">
+                                </div>
+                            </div>
+                        <button class="btn contact__form-btn header__popup-btn">Заказать звонок</button>
+                        <p class="header__popup-text">Заполняя данные, вы автоматически соглашаетесь c 
+                            нашей <a href="#" class="popup-link">политикой конфиденциальности </a> и 
+                            обработкой персональных данных</p>
+                    </form>
+                </div>
+            </div>                          
             <!--==================== HOME ====================-->
             <section class="home" id="home">
                 <div class="container">
@@ -59,7 +86,7 @@
                         <div class="home__text">
                             <h1 class="home__text-title">Бесплатное обслуживание вашего сайта</h1>
                             <p class="home__text-subtitle">При заказе разработки сайта в комплексе с CEO <br> оптимизацией, мы дарим нашим клиентам бесплатное <br> обслуживание сайта на 12 месяцев</p>
-                            <a href="#" class="btn home__text-btn">Обсудить проект</a>
+                           <a href="#" class="btn home__text-btn">Обсудить проект</a>
                         </div>
                         <d class="home__icons">
                             <a href="https://vk.com/webstoresite" class="home__icon icon-vk" target="_blank"><img class="home__icon-img" src="/assets/img/vk.svg" alt="Вконтакте"></a>
@@ -70,8 +97,9 @@
                 </div>
             </section>
 
+
             <!--==================== LOGOS ====================-->
-            <section class="portfolio">
+            <section class="portfolio" id="portfolio">
                 <div class="container">
                     <h2 class="portfolio__title">Портфолио</h2>
                     <div class="portfolio__design">
@@ -149,6 +177,31 @@
                         </div>
                     </div>
                 </div>
+                <div class="home__popup services__popup">
+                    <div class="home__popup-wrapper">
+                        <form action="" class="contact__form header__popup-form">
+                            <p class="contact__form-title">Заполните форму для <br> обсуждения проекта</p>
+                                <div class="header__popup-wrapper">
+                                    <div class="contact__form-group">
+                                        <label class="input-text" for="">Имя</label>
+                                        <input class="input header__input" type="text" placeholder="Владислав">
+                                    </div>
+                                    <div class="contact__form-group">
+                                        <label class="input-text" for="">e-mail</label>
+                                        <input class="input header__input" type="email" placeholder="webstoresitemarket@gmail.com">
+                                    </div>
+                                    <div class="contact__form-group">
+                                        <label class="input-text" for="">Номер телефона</label>
+                                        <input class="input header__input" type="tel" placeholder="8 (900)-999-00-00">
+                                    </div>
+                                </div>
+                            <button class="btn contact__form-btn header__popup-btn">Заказать звонок</button>
+                            <p class="header__popup-text">Заполняя данные, вы автоматически соглашаетесь c 
+                                нашей <a href="#" class="popup-link">политикой конфиденциальности </a> и 
+                                обработкой персональных данных</p>
+                        </form>
+                    </div>
+                </div>   
             </section>
 
             <!--==================== ORDER  ====================-->
@@ -156,7 +209,31 @@
                 <div class="container">
                 <div class="order__item">
                     <h1 class="order__title">Web-разработка</h1>
-                    <div class="order__item-content">
+                    <div class="order__item-content ">
+                        <img src="/assets/img/orderweb.png" alt="Проект">
+                        <div class="order__item-text order__text">
+                            <h2 class="order__text-title">Сайт визитка</h2>
+                            <p class="order__text-subtitle">Сайт-визитка — это виртуальная визитная карточка компании или отдельного человека. Такой сайт знакомит потенциальных клиентов с брендом или его услугами. Визитки подойдут всем, кто предлагает свои услуги.</p>
+                            <div class="order__text-down">
+                                <p class="order__text-price">от <span>7.990P</span></p>
+                                <button class="btn order__text-btn">Заказать</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="order__item-content ">
+                        <img src="/assets/img/orderweb.png" alt="Проект">
+                        <div class="order__item-text order__text">
+                            <h2 class="order__text-title">Сайт визитка</h2>
+                            <p class="order__text-subtitle">Сайт-визитка — это виртуальная визитная карточка компании или отдельного человека. Такой сайт знакомит потенциальных клиентов с брендом или его услугами. Визитки подойдут всем, кто предлагает свои услуги.</p>
+                            <div class="order__text-down">
+                                <p class="order__text-price">от <span>7.990P</span></p>
+                                <button class="btn order__text-btn">Заказать</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="order__item-content ">
                         <img src="/assets/img/orderweb.png" alt="Проект">
                         <div class="order__item-text order__text">
                             <h2 class="order__text-title">Сайт визитка</h2>
@@ -170,7 +247,7 @@
                     <div class="order__item-more">
                         <span class="item-more">Показать еще</span>
                         <img class="more-img" src="/assets/img/ordermore.svg" alt="Показать еще">
-                    </div>
+                    </div> -->
                 </div>
 
                 <div class="order__item">
@@ -233,9 +310,9 @@
                                 Если вам нужен сайт, который принесет продажи, будет иметь современный стиль и интуитивную структуру. Тогда можете без проблем обратиться в нашу компанию, а далее все сделают профессионалы.</p>
                         </div>
                         <div class="about__content-icons about__icon">
-                           <a  href=""><img class="about__icon-img" src="/assets/img/blueicon-vk.svg" alt="Вконтакте"></a>
-                           <a  href=""><img class="about__icon-img" src="/assets/img/blueicon-youtube.svg" alt="Ютубе"></a>
-                           <a  href=""><img class="about__icon-img" src="/assets/img/blueicon-telegram.svg" alt="Телеграм"></a>
+                           <a  href="https://vk.com/webstoresite" target="_blank"><img class="about__icon-img home__icon-img" src="/assets/img/blueicon-vk.svg" alt="Вконтакте"></a>
+                           <a  href="https://www.youtube.com/channel/UCyJBbL5ZcZDQSsF-8KFXgBA" target="_blank"><img class="about__icon-img home__icon-img" src="/assets/img/blueicon-youtube.svg" alt="Ютубе"></a>
+                           <a  href="https://t.me/webstoresite" target="_blank"><img class="about__icon-img home__icon-img" src="/assets/img/blueicon-telegram.svg" alt="Телеграм"></a>
                         </div>
                     </div>
                     <div class="about__work">
@@ -291,7 +368,7 @@
             </section>
 
             <!--==================== REVIEW====================-->
-            <section class="review">
+            <section class="review" id="review">
                 <div class="container">
                     <h2 class="review__title">Отзывы</h2>
                     
@@ -315,25 +392,25 @@
             </section>
         </main>
         <!-- =================== CONTACT ==================== -->
-        <section class="contact">
+        <section class="contact" id="contact">
             <div class="container">
                 <h2 class="contact__title">Контакты</h2>
                 <div class="contact__wrapper">
                     <address class="contact__address">
+                        <p class="input-text">Контактный номер</p>
                         <div class="contact__address-phone">
-                            <p class="input-text">Контактный номер</p>
-                            <a href="tel:+89009990000">8 (900)-999-00-00</a>
+                            <a class="phone__contact" href="tel:+89009990000">8 (900)-999-00-00</a>
                         </div>
+                        <p class="input-text">e-mail</p>
                         <div class="contact__address-email">
-                            <p class="input-text">e-mail</p>
-                            <a href="mailto:webstoresitemarket@gmmail.com">webstoresitemarket@gmmail.com</a>
+                        <a class="phone__contact" href="mailto:webstoresitemarket@gmail.com">webstoresitemarket@gmail.com</a>
                         </div>
                         <div class="contact__address-social">
                             <p class="input-text">соц.сети</p>
                             <div class="address__social-wrapper">
-                                <a href=""><img src="/assets/img/blueicon-vk.svg" alt="Вконтакте"></a>
-                                <a href=""><img src="/assets/img/blueicon-youtube.svg" alt="Ютубе"></a>
-                                <a href=""><img src="/assets/img/blueicon-telegram.svg" alt="Телеграм"></a>
+                                <a href="https://vk.com/webstoresite" target="_blank"><img class="home__icon-img" src="/assets/img/blueicon-vk.svg" alt="Вконтакте"></a>
+                                <a href="https://www.youtube.com/channel/UCyJBbL5ZcZDQSsF-8KFXgBA" target="_blank"><img class="home__icon-img" src="/assets/img/blueicon-youtube.svg" alt="Ютубе"></a>
+                                <a href="https://t.me/webstoresite" target="_blank"><img class="home__icon-img" src="/assets/img/blueicon-telegram.svg" alt="Телеграм"></a>
                             </div>
                         </div>
                     </address>
@@ -383,15 +460,15 @@
                     <button class="btn contact__form-btn">Заказать звонок</button>
                     </form>
                 </div>
-            </div>
+            </div>  
         </section>
-        <section class="partners">
+        <section class="partners" id="partners">
             <div class="container">
                 <h1 class="partners__title">Партнеры</h1>
                 <div class="partners__img">
-                    <img src="/assets/img/par1.svg" alt="Партнеры">
-                    <img src="/assets/img/par2.svg" alt="Партнеры">
-                    <img src="/assets/img/par3.svg" alt="Партнеры">
+                    <img class="" src="/assets/img/par1.svg" alt="Партнеры">
+                    <img class="" src="/assets/img/par2.svg" alt="Партнеры">
+                    <img class="" src="/assets/img/par3.svg" alt="Партнеры">
                 </div>
             </div>
         </section>
@@ -426,9 +503,9 @@
                 <div class="footer__items">
                     <p class="footer__items-briph">Бриф на разработку сайта</p>
                     <div class="footer__items-icon">
-                        <a href=""><img src="/assets/img/blueicon-vk.svg" alt="Вконтакте"></a>
-                        <a href=""><img src="/assets/img/blueicon-youtube.svg" alt="Ютуб"></a>
-                        <a href=""><img src="/assets/img/blueicon-telegram.svg" alt="Телеграм"></a>
+                        <a href="https://vk.com/webstoresite" target="_blank"><img class="home__icon-img" src="/assets/img/blueicon-vk.svg" alt="Вконтакте"></a>
+                        <a href="https://www.youtube.com/channel/UCyJBbL5ZcZDQSsF-8KFXgBA" target="_blank"><img class="home__icon-img" src="/assets/img/blueicon-youtube.svg" alt="Ютуб"></a>
+                        <a href="https://t.me/webstoresite" target="_blank"><img class="home__icon-img" src="/assets/img/blueicon-telegram.svg" alt="Телеграм"></a>
                     </div>
                     <a href="#" class="footer__items-politic">Политика конфидициальности</a>
                 </div>

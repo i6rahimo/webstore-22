@@ -1,4 +1,41 @@
-/*=============== CHANGE BACKGROUND HEADER ===============*/
+const btnHeaderPopup = document.querySelector('.home__text-btn');
+const headerPopup = document.querySelector('.home__popup');
+const btnServicesPopup = document.querySelectorAll('.services__item-btn');
+const servicePopup = document.querySelector('.services__popup');
+console.log(headerPopup);
+headerPopup.addEventListener('click', () => {
+  headerPopup.classList.remove('show')
+})
+btnHeaderPopup.addEventListener('click', (e) => {
+  headerPopup.classList.add('show')
+});
+btnServicesPopup.forEach((e) => {
+  e.addEventListener('click', () => {
+    servicePopup.classList.add('show');
+  })
+})
+servicePopup.addEventListener('click', ()=> {
+  servicePopup.classList.remove('show')
+})
+
+
+
+// =================  ORDER CONTENT =================
+
+const btnOrder = document.querySelector('.order__item-more');
+const contentOrder = document.querySelectorAll('.order__item-content')
+// btnOrder.addEventListener('click', (btn)=> {
+//   contentOrder.forEach((item)=> {
+//     item.classList.toggle('visible')
+//   })
+//   console.log('qwee');
+// })
+
+
+
+
+
+
 
 
 /*=============== SWIPER POPULAR ===============*/
@@ -20,17 +57,3 @@ const swiper = new Swiper('.portfolio-swiper', {
   });
 
   
-
-/*=============== VALUE ACCORDION ===============*/
-
-
-/*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
-
-
-/*=============== SHOW SCROLL UP ===============*/ 
-
-
-/*=============== DARK LIGHT THEME ===============*/ 
-
-
-/*=============== SCROLL REVEAL ANIMATION ===============*/
