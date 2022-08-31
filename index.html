@@ -34,7 +34,7 @@
                             <a href="#about" class="header__link">О нас</a>
                         </li>
                         <li class="header__li">
-                            <a href="#" class="header__logo"><img src="/assets/img/logo.svg" alt="logo"></a>
+                            <a href="http://127.0.0.1:5500" class="header__logo"><img src="/assets/img/logo.svg" alt="logo"></a>
                         </li>
                         <li class="header__li">
                             <a href="#review" class="header__link">Отзывы</a>
@@ -49,36 +49,37 @@
                 </nav>
             </div>
         </header>
-        
+        <div class="popup ">
+            <form class="popup__wrapper" enctype="multipart/form-data" method="post" id="form" onsubmit="send(event, 'send.php')">
+                <div class="popup__header">
+                    <p class="popup__header-text">Заполните форму для подачи заявки на разработку сайта</p>
+                     <img class="popup__close"  src="/assets/img/close.svg" alt="Закрыть"> 
+                </div>
+                <div class="popup__line"></div>
+                <div class="popup__content">
+                    <div class="contact__form-group popup__group">
+                        <label class="input-text " for="">Имя</label>
+                        <input class="input popup__input" type="text" placeholder="Владислав">
+                    </div>
+                    <div class="contact__form-group popup__group">
+                        <label class="input-text" for="">e-mail</label>
+                        <input class="input popup__input" type="email" placeholder="webstoresitemarket@gmail.com">
+                    </div>
+                    <div class="contact__form-group popup__group">
+                        <label class="input-text" for="">Номер телефона</label>
+                        <input class="input popup__input" type="tel" placeholder="8 (900)-999-00-00">
+                    </div>
+                    <button class="btn popup__btn">Оставить заявку</button>
+                    <div class="popup__text">Заполняя данные, вы автоматически соглашаетесь c 
+                        нашей <a href="/assets/pages/politic.html">политикой конфиденциальности</a>  и 
+                        обработкой персональных данных</div>
+                </div>
+            </form>
+        </div>
 
         <!--==================== MAIN ====================-->
         <main class="main">
-            <div class="home__popup">
-    
-                <div class="home__popup-wrapper">
-                    <form action="" class="contact__form header__popup-form">
-                        <p class="contact__form-title">заполните форму ДЛЯ ПОДАЧИ ЗАЯВКИ НА РАЗРАБОТКУ САЙТА</p>
-                            <div class="header__popup-wrapper">
-                                <div class="contact__form-group">
-                                    <label class="input-text" for="">Имя</label>
-                                    <input class="input header__input" type="text" placeholder="Владислав">
-                                </div>
-                                <div class="contact__form-group">
-                                    <label class="input-text" for="">e-mail</label>
-                                    <input class="input header__input" type="email" placeholder="webstoresitemarket@gmail.com">
-                                </div>
-                                <div class="contact__form-group">
-                                    <label class="input-text" for="">Номер телефона</label>
-                                    <input class="input header__input" type="tel" placeholder="8 (900)-999-00-00">
-                                </div>
-                            </div>
-                        <button class="btn contact__form-btn header__popup-btn">Заказать звонок</button>
-                        <p class="header__popup-text">Заполняя данные, вы автоматически соглашаетесь c 
-                            нашей <a href="#" class="popup-link">политикой конфиденциальности </a> и 
-                            обработкой персональных данных</p>
-                    </form>
-                </div>
-            </div>                          
+                       
             <!--==================== HOME ====================-->
             <section class="home" id="home">
                 <div class="container">
@@ -86,7 +87,7 @@
                         <div class="home__text">
                             <h1 class="home__text-title">Бесплатное обслуживание вашего сайта</h1>
                             <p class="home__text-subtitle">При заказе разработки сайта в комплексе с CEO <br> оптимизацией, мы дарим нашим клиентам бесплатное <br> обслуживание сайта на 12 месяцев</p>
-                           <a href="#" class="btn home__text-btn">Обсудить проект</a>
+                           <a href="#" class="btn home__text-btn" >Обсудить проект</a>
                         </div>
                         <d class="home__icons">
                             <a href="https://vk.com/webstoresite" class="home__icon icon-vk" target="_blank"><img class="home__icon-img" src="/assets/img/vk.svg" alt="Вконтакте"></a>
@@ -148,7 +149,7 @@
                                     <p class="item-text">Гарантийное обслуживание 12 месяцев</p>
                                 </div>
                                 <p class="services__item-price">30.000P</p>
-                                <button class="btn services__item-btn">Обсудить</button>
+                                <button class="btn services__item-btn" >Обсудить</button>
                             </div>
 
                             <div class="services__item">
@@ -159,7 +160,7 @@
                                     <p class="item-text">ГАРАНТИЙНОЕ ОБСУЛЖИВАНИЕ 12 МЕСЯЦЕВ</p>
                                 </div>
                                 <p class="services__item-price">70.000P</p>
-                                <button class="btn services__item-btn">Обсудить</button>
+                                <button class="btn services__item-btn" >Обсудить</button>
                             </div>
 
                             <div class="services__item">
@@ -172,36 +173,12 @@
                                     <p class="item-text">нАСТРОЙКА РЕКЛАМЫ</p>
                                 </div>
                                 <p class="services__item-price">65.000P</p>
-                                <button class="btn services__item-btn">Обсудить</button>
+                                <button class="btn services__item-btn" >Обсудить</button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="home__popup services__popup">
-                    <div class="home__popup-wrapper">
-                        <form action="" class="contact__form header__popup-form">
-                            <p class="contact__form-title">Заполните форму для <br> обсуждения проекта</p>
-                                <div class="header__popup-wrapper">
-                                    <div class="contact__form-group">
-                                        <label class="input-text" for="">Имя</label>
-                                        <input class="input header__input" type="text" placeholder="Владислав">
-                                    </div>
-                                    <div class="contact__form-group">
-                                        <label class="input-text" for="">e-mail</label>
-                                        <input class="input header__input" type="email" placeholder="webstoresitemarket@gmail.com">
-                                    </div>
-                                    <div class="contact__form-group">
-                                        <label class="input-text" for="">Номер телефона</label>
-                                        <input class="input header__input" type="tel" placeholder="8 (900)-999-00-00">
-                                    </div>
-                                </div>
-                            <button class="btn contact__form-btn header__popup-btn">Заказать звонок</button>
-                            <p class="header__popup-text">Заполняя данные, вы автоматически соглашаетесь c 
-                                нашей <a href="#" class="popup-link">политикой конфиденциальности </a> и 
-                                обработкой персональных данных</p>
-                        </form>
-                    </div>
-                </div>   
+                
             </section>
 
             <!--==================== ORDER  ====================-->
@@ -216,10 +193,26 @@
                             <p class="order__text-subtitle">Сайт-визитка — это виртуальная визитная карточка компании или отдельного человека. Такой сайт знакомит потенциальных клиентов с брендом или его услугами. Визитки подойдут всем, кто предлагает свои услуги.</p>
                             <div class="order__text-down">
                                 <p class="order__text-price">от <span>7.990P</span></p>
-                                <button class="btn order__text-btn">Заказать</button>
+                                <button class="btn order__text-btn" >Заказать</button>
                             </div>
                         </div>
                     </div>
+                    <div class="order__item-more">
+                        <span class="item-more">Показать еще</span>
+                        <img class="more-img" src="/assets/img/ordermore.svg" alt="Показать еще">
+                    </div>
+
+                    <!-- <!-- <div class="order__item-content ">
+                        <img src="/assets/img/orderweb.png" alt="Проект">
+                        <div class="order__item-text order__text">
+                            <h2 class="order__text-title">Сайт визитка</h2>
+                            <p class="order__text-subtitle">Сайт-визитка — это виртуальная визитная карточка компании или отдельного человека. Такой сайт знакомит потенциальных клиентов с брендом или его услугами. Визитки подойдут всем, кто предлагает свои услуги.</p>
+                            <div class="order__text-down">
+                                <p class="order__text-price">от <span>7.990P</span></p>
+                                <button class="btn order__text-btn">Заказать</button>
+                            </div>
+                        </div>
+                    </div> -->
 
                     <!-- <div class="order__item-content ">
                         <img src="/assets/img/orderweb.png" alt="Проект">
@@ -228,25 +221,9 @@
                             <p class="order__text-subtitle">Сайт-визитка — это виртуальная визитная карточка компании или отдельного человека. Такой сайт знакомит потенциальных клиентов с брендом или его услугами. Визитки подойдут всем, кто предлагает свои услуги.</p>
                             <div class="order__text-down">
                                 <p class="order__text-price">от <span>7.990P</span></p>
-                                <button class="btn order__text-btn">Заказать</button>
+                                <button class="btn order__text-btn" data-popup="#popup_3">Заказать</button>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="order__item-content ">
-                        <img src="/assets/img/orderweb.png" alt="Проект">
-                        <div class="order__item-text order__text">
-                            <h2 class="order__text-title">Сайт визитка</h2>
-                            <p class="order__text-subtitle">Сайт-визитка — это виртуальная визитная карточка компании или отдельного человека. Такой сайт знакомит потенциальных клиентов с брендом или его услугами. Визитки подойдут всем, кто предлагает свои услуги.</p>
-                            <div class="order__text-down">
-                                <p class="order__text-price">от <span>7.990P</span></p>
-                                <button class="btn order__text-btn">Заказать</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="order__item-more">
-                        <span class="item-more">Показать еще</span>
-                        <img class="more-img" src="/assets/img/ordermore.svg" alt="Показать еще">
                     </div> -->
                 </div>
 
@@ -259,7 +236,7 @@
                             <p class="order__text-subtitle">Логотип — это графическое изображение, которое служит «лицом» или визитной карточкой Вашей компании. Он выражает основное направление деятельности компании, её ценность и ключевые характеристики создаваемого бренда..</p>
                             <div class="order__text-down">
                                 <p class="order__text-price">от <span>3.990P</span></p>
-                                <button class="btn order__text-btn">Заказать</button>
+                                <button class="btn order__text-btn" >Заказать</button>
                             </div>
                         </div>
                     </div>
@@ -278,7 +255,7 @@
                             <p class="order__text-subtitle">Что такое SEO? Это большой комплекс работ по увеличению видимости сайта по поисковым запросам в выдаче поисковых систем. Увеличение посещаемости сайта из поисковых систем.</p>
                             <div class="order__text-down">
                                 <p class="order__text-price">от <span>19.990P</span></p>
-                                <button class="btn order__text-btn">Заказать</button>
+                                <button class="btn order__text-btn" ">Заказать</button>
                             </div>
                         </div>
                     </div>
@@ -294,7 +271,9 @@
                     <h1 class="about__title">О нас</h1>
                     <div class="about__content">
                         <div class="about__content-video">
-                            <img src="/assets/img/about.png" alt="">
+                            <!-- <div class="video">
+                                <iframe  src="https://www.youtube.com/embed/U2jo-XNe1HM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div> -->
                         </div>
                         <div class="about__content-text about__text">
                             <h3 class="about__text-title">Что такое webstore</h3>
@@ -387,7 +366,7 @@
                     <div class="swiper-button-next"></div>
                   
                 </div>
-                <button class="btn review__btn">Оставить отзыв</button>
+                <button class="btn review__btn" >Оставить отзыв</button>
                 </div>
             </section>
         </main>
@@ -507,7 +486,7 @@
                         <a href="https://www.youtube.com/channel/UCyJBbL5ZcZDQSsF-8KFXgBA" target="_blank"><img class="home__icon-img" src="/assets/img/blueicon-youtube.svg" alt="Ютуб"></a>
                         <a href="https://t.me/webstoresite" target="_blank"><img class="home__icon-img" src="/assets/img/blueicon-telegram.svg" alt="Телеграм"></a>
                     </div>
-                    <a href="#" class="footer__items-politic">Политика конфидициальности</a>
+                    <a href="/assets/pages/politic.html" class="footer__items-politic">Политика конфидициальности</a>
                 </div>
             </div>
             </div>
@@ -518,7 +497,7 @@
 
 
         <!--=============== SCROLLREVEAL ===============-->
-        <script src=""></script>
+        <!-- <script src=""></script> -->
 
         <!--=============== SWIPER JS ===============-->
         <script src="/assets/js/swiper-bundle.min.js"></script>

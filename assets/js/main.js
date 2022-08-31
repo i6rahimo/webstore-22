@@ -1,40 +1,47 @@
-const btnHeaderPopup = document.querySelector('.home__text-btn');
-const headerPopup = document.querySelector('.home__popup');
-const btnServicesPopup = document.querySelectorAll('.services__item-btn');
-const servicePopup = document.querySelector('.services__popup');
-console.log(headerPopup);
-headerPopup.addEventListener('click', () => {
-  headerPopup.classList.remove('show')
+const popupbtn = document.querySelector('.home__text-btn')
+const popupHome = document.querySelector('.popup')
+const popupClose = document.querySelector('.popup__close')
+popupbtn.addEventListener('click', ()=> {
+  popupHome.classList.toggle('show')
 })
-btnHeaderPopup.addEventListener('click', (e) => {
-  headerPopup.classList.add('show')
-});
-btnServicesPopup.forEach((e) => {
-  e.addEventListener('click', () => {
-    servicePopup.classList.add('show');
-  })
+// popupHome.addEventListener('click', ()=> {
+//   popupHome.classList.toggle('show')
+// })
+popupClose.addEventListener('click', () => {
+  popupHome.classList.remove('show')
 })
-servicePopup.addEventListener('click', ()=> {
-  servicePopup.classList.remove('show')
-})
-
-
 
 // =================  ORDER CONTENT =================
 
-const btnOrder = document.querySelector('.order__item-more');
-const contentOrder = document.querySelectorAll('.order__item-content')
-// btnOrder.addEventListener('click', (btn)=> {
-//   contentOrder.forEach((item)=> {
-//     item.classList.toggle('visible')
-//   })
-//   console.log('qwee');
-// })
 
 
 
 
-
+function send(event, php){
+  console.log("Отправка запроса");
+  event.preventDefault ? event.preventDefault() : event.returnValue = false;
+  var req = new XMLHttpRequest();
+  req.open('POST', php, true);
+  req.onload = function() {
+    if (req.status >= 200 && req.status < 400) {
+    json = JSON.parse(this.response); // Ебанный internet explorer 11
+        console.log(json);
+          
+        // ЗДЕСЬ УКАЗЫВАЕМ ДЕЙСТВИЯ В СЛУЧАЕ УСПЕХА ИЛИ НЕУДАЧИ
+        if (json.result == "success") {
+          // Если сообщение отправлено
+          alert("Сообщение отправлено");
+        } else {
+          // Если произошла ошибка
+          alert("Ошибка. Сообщение не отправлено");
+        }
+      // Если не удалось связаться с php файлом
+      } else {alert("Ошибка сервера. Номер: "+req.status);}}; 
+  
+  // Если не удалось отправить запрос. Стоит блок на хостинге
+  req.onerror = function() {alert("Ошибка отправки запроса");};
+  req.send(new FormData(event.target));
+  }
 
 
 

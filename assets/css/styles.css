@@ -544,9 +544,16 @@ button {
   margin:  0 0 23px;
 }
 .about__content-video {
-  flex: 1 1 470px;
+  width: 470px;
+  max-width: 100%;
+  height: 264px;  
+  /* flex: 1 1 470px; */
 }
-
+.video {
+  width: 100%;
+  height: 100%;
+  /* padding-top: 56% */
+}
 .about__content-text {
   flex: 1 1 570px;
   margin: 0 50px 0 30px;
@@ -709,7 +716,7 @@ letter-spacing: 0.1em;
   font-style: normal;
 }
 .contact__address {
-  user-select: initial;
+  max-width: 100%;
 }
 .contact__address > div > p {
   font-style: normal;
@@ -720,7 +727,8 @@ letter-spacing: 0.1em;
   text-align: center;
   padding: 14px 33px;
   background: var(--second-color);
-  width: 100%;
+  width: 370px;
+  max-width: 100%;
   margin: 24px 0 50px;
 }
 .phone__contact {
@@ -822,13 +830,22 @@ letter-spacing: 0.1em;
   flex-direction: column;
   gap: 15px;
 }
+.contact__form-comment textarea {
+  padding: 11px 42px 11px 13px;
+  font-size: var(--small-font-size);
+  line-height: 15px;
+letter-spacing: 0.1em;
+}
+.contact__form-comment textarea:focus {
+  outline: none;
+}
 .input {
   width: 240px;
   max-width: 100%;
   border: 0.5px solid var(--first-color);
   padding: 11px 0 11px 13px;
 }
-.contact__form-btn {
+.contact__form-btn, .popup__btn {
   cursor: pointer;
   position: relative;
   margin: 0 auto  30px;
@@ -839,19 +856,19 @@ letter-spacing: 0.1em;
   letter-spacing: 0.05em;
   z-index: 1;
 }
-.contact__form-btn::before {
+.contact__form-btn, .popup__btn::before {
   content: '';
   position: absolute;
   inset: 0;
   background: linear-gradient(92.83deg, #885FFF 0%, #BB65FF 100%);
   z-index: -1;
 }
-.contact__form-btn:hover {
+.contact__form-btn, .popup__btn:hover {
   color: var(--first-color);
   background: none;
   outline: 1px solid #546FFF ;
 }
-.contact__form-btn:hover::before {
+.contact__form-btn, .popup__btn:hover::before {
   opacity: 0;
   transition: all .3s ease;
 } 
@@ -921,8 +938,88 @@ letter-spacing: 0.1em;
   color: var(--first-color);
 }
 /*=============== POPUP ===============*/
+.popup {
 
-/* box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .74 ); */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  /* background: #060606; */
+  z-index: 21;
+  /* display: none; */
+}
+.popup__close {
+  cursor: pointer;
+}
+.popup.show {
+  display: flex;
+}
+.popup__input {
+  max-width: 453px;
+  width: 100%;
+}
+.popup__wrapper {
+  z-index: 2;
+  box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .74 );
+  position: relative;
+  width: 513px;
+  max-width: 100%;
+  background-color: var(--second-color);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 0 20px;
+}
+.popup__text a {
+  color:var(--first-color);
+  text-decoration: underline;
+}
+.popup__content {
+}
+.popup__text  {
+  font-size: 10px;
+  color:var(--first-color);
+  text-align: center;
+  letter-spacing: 0.1em;
+  line-height: 15px;
+}
+.popup__line {
+  width: 100%;
+  height: 2px;
+  background-color: var(--first-color);
+}
+.popup__header {
+  display: flex;
+  align-items: flex-start;
+  gap: 72px;
+  width: 414px;
+  max-width: 100%;
+  padding: 11px 11px 11px 0 ;
+}
+.popup__header-text {
+  font-size: 16px;
+  line-height: 120.52%;
+  color: var(--first-color);
+  font-size: var(--normal-font-size);
+  text-transform: uppercase;
+  font-weight: var(--font-bold);
+  text-align: center;
+}
+.popup__content {
+  padding: 30px 30px 18px 30px;
+}
+.popup__group {
+  gap: 12px;
+}
+.popup__group:not(:first-child) {
+  margin: 30px 0;
+}
+.popup.active {
+  display: block;
+}
 .header__input {
   width: 453px;
   max-width: 100%;
@@ -951,32 +1048,11 @@ letter-spacing: 0.1em;
   text-decoration: underline;
 }
 
-.services__popup.show, .home__popup.show {
-  display: block;
-}
-/*=============== SCROLL BAR ===============*/
-.home__popup {
-  top: 0;
-  z-index: 12;
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  display: none;
-}
 
-.home__popup-wrapper {
-  box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .74 );
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 513px;
-  max-width: 100%;
-  background: #fff;
-  margin: 0 20px;
-  z-index: 222222;
-}
 /*=============== SCROLL UP ===============*/
+.politic__text {
+  margin: 80px 0;
+}
 
 
 /* Show Scroll Up*/
