@@ -775,12 +775,12 @@ letter-spacing: 0.1em;
 .contact__form-right {
   display: flex;
   flex-direction: column;
-  gap: 57px;
+  gap: 47px;
 }
 .contact__form-group {
   display: flex;
   flex-direction: column;
-  gap: 26px;
+  gap: 15px;
 }
 .choose__group-wrapper  {
   display: flex;
@@ -830,22 +830,27 @@ letter-spacing: 0.1em;
   flex-direction: column;
   gap: 15px;
 }
-.contact__form-comment textarea {
+.textarea {
   padding: 11px 42px 11px 13px;
   font-size: var(--small-font-size);
   line-height: 15px;
-letter-spacing: 0.1em;
+  resize: none;
+  letter-spacing: 0.1em;
+  width: 340px;
+  max-width: 100%;
+  height: 144px;
 }
-.contact__form-comment textarea:focus {
+.textarea:focus {
   outline: none;
 }
+
 .input {
   width: 240px;
   max-width: 100%;
   border: 0.5px solid var(--first-color);
   padding: 11px 0 11px 13px;
 }
-.contact__form-btn, .popup__btn {
+.contact__form-btn, .popup__btn, .contact__btn {
   cursor: pointer;
   position: relative;
   margin: 0 auto  30px;
@@ -856,7 +861,26 @@ letter-spacing: 0.1em;
   letter-spacing: 0.05em;
   z-index: 1;
 }
-.contact__form-btn, .popup__btn::before {
+.contact__btn {
+  margin: 30px auto 30px;
+}
+.contact__btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(92.83deg, #885FFF 0%, #BB65FF 100%);
+  z-index: -1;
+}
+.contact__btn:hover {
+  color: var(--first-color);
+  background: none;
+  outline: 1px solid #546FFF ;
+}
+.contact__btn:hover::before {
+  opacity: 0;
+  transition: all .3s ease;
+} 
+.contact__form-btn,  .popup__btn::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -872,6 +896,7 @@ letter-spacing: 0.1em;
   opacity: 0;
   transition: all .3s ease;
 } 
+
 /*=============== PARTNERS ===============*/
 .partners {
   margin: 0 0 80px;
@@ -954,6 +979,10 @@ letter-spacing: 0.1em;
 .popup__close {
   cursor: pointer;
 }
+.popup__btn {
+  font-size: var(--h3-font-size);
+  line-height: 120.52%;
+}
 .popup.show {
   display: flex;
 }
@@ -1020,6 +1049,12 @@ letter-spacing: 0.1em;
 .popup.active {
   display: block;
 }
+.popup__order {
+  display: none;
+}
+.popup__order.show {
+  display: flex;
+}
 .header__input {
   width: 453px;
   max-width: 100%;
@@ -1048,7 +1083,23 @@ letter-spacing: 0.1em;
   text-decoration: underline;
 }
 
-
+.popup__review {
+  display: none;
+}
+.popup__review.show {
+  display: flex;
+}
+.popup__review-header {
+  width: 340px;
+  padding: 21px 11px 21px 0;
+  text-align: center;
+  justify-content: space-between;
+}
+.textarea__reviews {
+  width: 453px;
+  max-width: 100%;
+  height: 88px;
+}
 /*=============== SCROLL UP ===============*/
 .politic__text {
   margin: 80px 0;

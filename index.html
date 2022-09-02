@@ -50,7 +50,7 @@
             </div>
         </header>
         <div class="popup ">
-            <form class="popup__wrapper" action="send.php"  enctype="multipart/form-data" method="post" id="form" onsubmit="send(event, 'send.php')">
+          <form class="popup__wrapper" action="send.php"  enctype="multipart/form-data" method="post" id="form" onsubmit="send(event, 'send.php')">
                 <div class="popup__header">
                     <p class="popup__header-text">Заполните форму для подачи заявки на разработку сайта</p>
                      <img class="popup__close"  src="/assets/img/close.svg" alt="Закрыть"> 
@@ -74,7 +74,7 @@
                         нашей <a href="/assets/pages/politic.html">политикой конфиденциальности</a>  и 
                         обработкой персональных данных</div>
                 </div>
-            </form>
+            </form>  
         </div>
 
         <!--==================== MAIN ====================-->
@@ -135,6 +135,33 @@
             </section>
 
             <!--==================== SERVICES ====================-->
+            <div class="popup popup__order ">
+                <form class="popup__wrapper" action="order.php"  enctype="multipart/form-data" method="post" id="form" onsubmit="send(event, 'order.php')">
+                      <div class="popup__header">
+                          <p class="popup__header-text">Заполните форму для обсуждения проекта</p>
+                           <img class="popup__close order__close"  src="/assets/img/close.svg" alt="Закрыть"> 
+                      </div>
+                      <div class="popup__line"></div>
+                      <div class="popup__content">
+                          <div class="contact__form-group popup__group">
+                              <label class="input-text " for="">Имя</label>
+                              <input class="input popup__input" type="text" placeholder="Владислав" name="user_name">
+                          </div>
+                          <div class="contact__form-group popup__group">
+                              <label class="input-text" for="">e-mail</label>
+                              <input class="input popup__input" type="email" placeholder="webstoresitemarket@gmail.com" name="user_email">
+                          </div>
+                          <div class="contact__form-group popup__group">
+                              <label class="input-text" for="">Номер телефона</label>
+                              <input class="input popup__input" type="tel" placeholder="8 (900)-999-00-00" name="user_phone">
+                          </div>
+                          <button class="btn popup__btn" type="submit">Обсудить проект</button>
+                          <div class="popup__text">Заполняя данные, вы автоматически соглашаетесь c 
+                              нашей <a href="/assets/pages/politic.html">политикой конфиденциальности</a>  и 
+                              обработкой персональных данных</div>
+                      </div>
+                  </form>  
+              </div>
             <section class="services" id="services">
                 <div class="container">
                     <div class="services__wrapper">
@@ -263,6 +290,33 @@
                 </div>
             </div>
             </section>
+            <div class="popup popup__order ">
+                <form class="popup__wrapper" action="order.php"  enctype="multipart/form-data" method="post" id="form" onsubmit="send(event, 'order.php')">
+                      <div class="popup__header">
+                          <p class="popup__header-text">Заполните форму для обсуждения проекта</p>
+                           <img class="popup__close order__close"  src="/assets/img/close.svg" alt="Закрыть"> 
+                      </div>
+                      <div class="popup__line"></div>
+                      <div class="popup__content">
+                          <div class="contact__form-group popup__group">
+                              <label class="input-text " for="">Имя</label>
+                              <input class="input popup__input" type="text" placeholder="Владислав" name="user_name">
+                          </div>
+                          <div class="contact__form-group popup__group">
+                              <label class="input-text" for="">e-mail</label>
+                              <input class="input popup__input" type="email" placeholder="webstoresitemarket@gmail.com" name="user_email">
+                          </div>
+                          <div class="contact__form-group popup__group">
+                              <label class="input-text" for="">Номер телефона</label>
+                              <input class="input popup__input" type="tel" placeholder="8 (900)-999-00-00" name="user_phone">
+                          </div>
+                          <button class="btn popup__btn" type="submit">Обсудить проект</button>
+                          <div class="popup__text">Заполняя данные, вы автоматически соглашаетесь c 
+                              нашей <a href="/assets/pages/politic.html">политикой конфиденциальности</a>  и 
+                              обработкой персональных данных</div>
+                      </div>
+                  </form>  
+              </div>
 
             <!--==================== CONTACT ====================-->
             <section class="about" id="about">
@@ -369,6 +423,30 @@
                 <button class="btn review__btn" >Оставить отзыв</button>
                 </div>
             </section>
+            <div class="popup popup__review">
+                <form class="popup__wrapper" action="review.php"  enctype="multipart/form-data" method="post" id="form" onsubmit="send(event, 'review.php')">
+                      <div class="popup__header popup__review-header">
+                          <p class="popup__header-text ">Оставить отзыв</p>
+                           <img class="popup__close review__close"  src="/assets/img/close.svg" alt="Закрыть"> 
+                      </div>
+                      <div class="popup__line"></div>
+                      <div class="popup__content">
+                          <div class="contact__form-group popup__group">
+                              <label class="input-text " for="">Имя</label>
+                              <input class="input popup__input" type="text" placeholder="Владислав" name="user_name">
+                          </div>
+                          
+                          <div class="contact__form-group popup__group">
+                            <label class="input-text " for="">Отзыв о нашей работе</label>
+                            <textarea name="" id="" class="textarea textarea__reviews" name="user_text"></textarea>
+                        </div>
+                        <button class="btn popup__btn" type="submit">Оставить отзыв</button>
+                          <div class="popup__text">Заполняя данные, вы автоматически соглашаетесь c 
+                              нашей <a href="/assets/pages/politic.html">политикой конфиденциальности</a>  и 
+                              обработкой персональных данных</div>
+                      </div>
+                  </form>  
+              </div>
         </main>
         <!-- =================== CONTACT ==================== -->
         <section class="contact" id="contact">
@@ -393,21 +471,21 @@
                             </div>
                         </div>
                     </address>
-                    <form action="" class="contact__form">
+                    <form action="send.php" class="contact__form">
                         <p class="contact__form-title">Заполните форму для заказа обратного звонка</p>
                         <div class="contact__form-wrapper">
                         <div class="contact__form-left">
                             <div class="contact__form-group">
                                 <label class="input-text" for="">Имя</label>
-                                <input class="input" type="text" placeholder="Владислав">
+                                <input class="input" type="text" placeholder="Владислав" name="user_name">
                             </div>
                             <div class="contact__form-group">
                                 <label class="input-text" for="">e-mail</label>
-                                <input class="input" type="email" placeholder="webstoresitemarket@gmail.com">
+                                <input class="input" type="email" placeholder="webstoresitemarket@gmail.com" name="user_email">
                             </div>
                             <div class="contact__form-group">
                                 <label class="input-text" for="">Номер телефона</label>
-                                <input class="input" type="tel" placeholder="8 (900)-999-00-00">
+                                <input class="input" type="tel" placeholder="8 (900)-999-00-00" name="user_phone">
                             </div>
                         </div>
                         <div class="contact__form-right">
@@ -432,11 +510,11 @@
                             </div>
                             <div class="contact__form-comment">
                                 <p class="input-text">Комментарий к звонку</p>
-                                <textarea name="" id="" cols="30" rows="11"></textarea>
+                                <textarea name="" id="" class="textarea" name="user_text">Lorem ipsum — классический текст-«рыба». Является искажённым отрывком из  философского трактата Марка Туллия Цицерона</textarea>
                             </div>
                         </div>
                     </div>
-                    <button class="btn contact__form-btn">Заказать звонок</button>
+                    <button class="btn contact__btn" type="submit">Заказать звонок</button>
                     </form>
                 </div>
             </div>  

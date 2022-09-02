@@ -1,16 +1,40 @@
 const popupbtn = document.querySelector('.home__text-btn')
 const popupHome = document.querySelector('.popup')
 const popupClose = document.querySelector('.popup__close')
-popupbtn.addEventListener('click', ()=> {
-  popupHome.classList.toggle('show')
-})
-// popupHome.addEventListener('click', ()=> {
-//   popupHome.classList.toggle('show')
-// })
-popupClose.addEventListener('click', () => {
-  popupHome.classList.remove('show')
-})
-
+const serviceBtn = document.querySelectorAll('.services__item-btn')
+const sentOrder = document.querySelector('.popup__order')
+const orderClose = document.querySelector('.order__close')
+const orderBtn = document.querySelectorAll('.order__text-btn')
+const reviewBtn = document.querySelector('.review__btn')
+const reviewPopup = document.querySelector('.popup__review')
+const reviewClose = document.querySelector('.review__close')
+  popupbtn.addEventListener('click', ()=> {
+    popupHome.classList.toggle('show');
+  })
+  popupClose.addEventListener('click', ()=> {
+    popupHome.classList.toggle('show')
+  })
+  
+  serviceBtn.forEach((el) => {
+    el.addEventListener('click', () => {
+      sentOrder.classList.toggle('show')
+    })
+  })
+  orderClose.addEventListener('click', () => {
+    sentOrder.classList.toggle('show')
+  })
+  
+  orderBtn.forEach((el)=>  {
+    el.addEventListener('click', ()=> {
+      sentOrder.classList.toggle('show')
+    })
+  })
+  reviewBtn.addEventListener('click', ()=> {
+    reviewPopup.classList.toggle('show')
+  })
+  reviewClose.addEventListener('click', ()=> {
+    reviewPopup.classList.toggle('show')
+  })
 // =================  ORDER CONTENT =================
 
 

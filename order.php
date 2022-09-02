@@ -10,7 +10,7 @@ $email = $_POST['user_email'];
 $text = $_POST['user_phone'];
 
 // Формирование самого письма
-$title = "Оставить заявку";
+$title = "Обсудить проект";
 $body = "
 <h2>Новое письмо</h2>
 <b>Имя:</b> $name<br>
@@ -35,7 +35,7 @@ try {
     $mail->Password   = 'qtplhafvckmwxtww'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
-    $mail->setFrom('ibra210@yandex.ru', 'Оставить заявку'); // Адрес самой почты и имя отправителя
+    $mail->setFrom('ibra210@yandex.ru', 'Обсудить проект'); // Адрес самой почты и имя отправителя
 
     // Получатель письма
     $mail->addAddress('ibra210@yandex.ru');

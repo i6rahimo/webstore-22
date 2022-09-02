@@ -6,16 +6,14 @@ require 'phpmailer/Exception.php';
 
 // Переменные, которые отправляет пользователь
 $name = $_POST['user_name'];
-$email = $_POST['user_email'];
-$text = $_POST['user_phone'];
+$text = $_POST['user_text'];
 
 // Формирование самого письма
-$title = "Оставить заявку";
+$title = "Отзыв";
 $body = "
 <h2>Новое письмо</h2>
 <b>Имя:</b> $name<br>
-<b>Почта:</b> $email<br><br>
-<b>Сообщение:</b><br>$phone
+<b>Почта:</b> $text<br><br>
 ";
 
 // Настройки PHPMailer
@@ -35,7 +33,7 @@ try {
     $mail->Password   = 'qtplhafvckmwxtww'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
-    $mail->setFrom('ibra210@yandex.ru', 'Оставить заявку'); // Адрес самой почты и имя отправителя
+    $mail->setFrom('ibra210@yandex.ru', 'Отзыв'); // Адрес самой почты и имя отправителя
 
     // Получатель письма
     $mail->addAddress('ibra210@yandex.ru');
