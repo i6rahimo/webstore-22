@@ -50,7 +50,7 @@
             </div>
         </header>
         <div class="popup ">
-            <form class="popup__wrapper" enctype="multipart/form-data" method="post" id="form" onsubmit="send(event, 'send.php')">
+            <form class="popup__wrapper" action="send.php"  enctype="multipart/form-data" method="post" id="form" onsubmit="send(event, 'send.php')">
                 <div class="popup__header">
                     <p class="popup__header-text">Заполните форму для подачи заявки на разработку сайта</p>
                      <img class="popup__close"  src="/assets/img/close.svg" alt="Закрыть"> 
@@ -59,17 +59,17 @@
                 <div class="popup__content">
                     <div class="contact__form-group popup__group">
                         <label class="input-text " for="">Имя</label>
-                        <input class="input popup__input" type="text" placeholder="Владислав">
+                        <input class="input popup__input" type="text" placeholder="Владислав" name="user_name">
                     </div>
                     <div class="contact__form-group popup__group">
                         <label class="input-text" for="">e-mail</label>
-                        <input class="input popup__input" type="email" placeholder="webstoresitemarket@gmail.com">
+                        <input class="input popup__input" type="email" placeholder="webstoresitemarket@gmail.com" name="user_email">
                     </div>
                     <div class="contact__form-group popup__group">
                         <label class="input-text" for="">Номер телефона</label>
-                        <input class="input popup__input" type="tel" placeholder="8 (900)-999-00-00">
+                        <input class="input popup__input" type="tel" placeholder="8 (900)-999-00-00" name="user_phone">
                     </div>
-                    <button class="btn popup__btn">Оставить заявку</button>
+                    <button class="btn popup__btn" type="submit">Оставить заявку</button>
                     <div class="popup__text">Заполняя данные, вы автоматически соглашаетесь c 
                         нашей <a href="/assets/pages/politic.html">политикой конфиденциальности</a>  и 
                         обработкой персональных данных</div>

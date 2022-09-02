@@ -5,10 +5,9 @@ require 'phpmailer/SMTP.php';
 require 'phpmailer/Exception.php';
 
 // Переменные, которые отправляет пользователь
-$name = $_POST['name'];
-$email = $_POST['email'];
-$text = $_POST['text'];
-$file = $_FILES['myfile'];
+$name = $_POST['user_name'];
+$email = $_POST['user_email'];
+$text = $_POST['user_phone'];
 
 // Формирование самого письма
 $title = "Обсудить проект";
@@ -16,7 +15,7 @@ $body = "
 <h2>Новое письмо</h2>
 <b>Имя:</b> $name<br>
 <b>Почта:</b> $email<br><br>
-<b>Сообщение:</b><br>$text
+<b>Сообщение:</b><br>$phone
 ";
 
 // Настройки PHPMailer
@@ -31,15 +30,15 @@ try {
     };
 
     // Настройки вашей почты
-    $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
-    $mail->Username   = 'i6rahim210@gmail.com'; // Логин на почте
-    $mail->Password   = 'gmail.i6rahim3301'; // Пароль на почте
+    $mail->Host       = 'smtp.yandex.ru'; // SMTP сервера вашей почты
+    $mail->Username   = 'ibra210'; // Логин на почте
+    $mail->Password   = 'qtplhafvckmwxtww'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
-    $mail->setFrom('mail@yandex.ru', 'Имя отправителя'); // Адрес самой почты и имя отправителя
+    $mail->setFrom('ibra210@yandex.ru', 'Обсудить'); // Адрес самой почты и имя отправителя
 
     // Получатель письма
-    $mail->addAddress('youremail@yandex.ru');
+    $mail->addAddress('ibra210@yandex.ru');
     $mail->addAddress('i6rahim210@gmail.com'); // Ещё один, если нужен
 
     // Прикрипление файлов к письму
