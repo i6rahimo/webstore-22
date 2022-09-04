@@ -1,8 +1,8 @@
 <?php
 // Файлы phpmailer
-require 'phpmailer/PHPMailer.php';
-require 'phpmailer/SMTP.php';
-require 'phpmailer/Exception.php';
+require 'assets/phpmailer/PHPMailer.php';
+require 'assets/phpmailer/SMTP.php';
+require 'assets/phpmailer/Exception.php';
 
 // Переменные, которые отправляет пользователь
 $name = $_POST['user_name'];
@@ -13,7 +13,7 @@ $title = "Отзыв";
 $body = "
 <h2>Новое письмо</h2>
 <b>Имя:</b> $name<br>
-<b>Почта:</b> $text<br><br>
+<b>Отзыв:</b> $text<br><br>
 ";
 
 // Настройки PHPMailer
@@ -69,4 +69,4 @@ try {
 }
 
 // Отображение результата
-echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);
+// echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);

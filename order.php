@@ -1,13 +1,13 @@
 <?php
 // Файлы phpmailer
-require 'phpmailer/PHPMailer.php';
-require 'phpmailer/SMTP.php';
-require 'phpmailer/Exception.php';
+require 'assets/phpmailer/PHPMailer.php';
+require 'assets/phpmailer/SMTP.php';
+require 'assets/phpmailer/Exception.php';
 
 // Переменные, которые отправляет пользователь
 $name = $_POST['user_name'];
 $email = $_POST['user_email'];
-$text = $_POST['user_phone'];
+$phone = $_POST['user_phone'];
 
 // Формирование самого письма
 $title = "Обсудить проект";
@@ -71,4 +71,4 @@ try {
 }
 
 // Отображение результата
-echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);
+// echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);

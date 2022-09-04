@@ -1,21 +1,21 @@
 <?php
 // Файлы phpmailer
-require 'phpmailer/PHPMailer.php';
-require 'phpmailer/SMTP.php';
-require 'phpmailer/Exception.php';
+require 'assets/phpmailer/PHPMailer.php';
+require 'assets/phpmailer/SMTP.php';
+require 'assets/phpmailer/Exception.php';
 
 // Переменные, которые отправляет пользователь
 $name = $_POST['user_name'];
+$text = $_POST['user_text'];
 $email = $_POST['user_email'];
-$text = $_POST['user_phone'];
 
 // Формирование самого письма
-$title = "Оставить заявку";
+$title = "Обсудить";
 $body = "
 <h2>Новое письмо</h2>
 <b>Имя:</b> $name<br>
-<b>Почта:</b> $email<br><br>
-<b>Сообщение:</b><br>$phone
+<b>Email:</b> $email<br><br>
+<b>Отзыв:</b> $text<br><br>
 ";
 
 // Настройки PHPMailer
@@ -31,11 +31,11 @@ try {
 
     // Настройки вашей почты
     $mail->Host       = 'smtp.yandex.ru'; // SMTP сервера вашей почты
-    $mail->Username   = 'ibra210'; // Логин на почте
+    $mail->Username   = 'ibra210@yandex.ru'; // Логин на почте
     $mail->Password   = 'qtplhafvckmwxtww'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
-    $mail->setFrom('ibra210@yandex.ru', 'Оставить заявку'); // Адрес самой почты и имя отправителя
+    $mail->setFrom('ibra210@yandex.ru', 'Отзыв'); // Адрес самой почты и имя отправителя
 
     // Получатель письма
     $mail->addAddress('ibra210@yandex.ru');
@@ -60,15 +60,12 @@ try {
     $mail->Body = $body;
 
     // Проверяем отравленность сообщения
-    if ($mail->send()) {
-        $result = "success";
-    } else {
-        $result = "error";
-    }
+
 } catch (Exception $e) {
     $result = "error";
     $status = "Сообщение не было отправлено. Причина ошибки: {$mail->ErrorInfo}";
 }
 
+
 // Отображение результата
-echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);
+// echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);

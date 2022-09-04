@@ -15,7 +15,7 @@
 
         <!--=============== CSS ===============-->
         <link rel="stylesheet" href="/assets/css/styles.css">
-
+        <script src=”//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js”></script>
         <title>Webstore 2022</title>
     </head>
     <body>
@@ -49,8 +49,8 @@
                 </nav>
             </div>
         </header>
-        <div class="popup ">
-          <form class="popup__wrapper" action="send.php"  enctype="multipart/form-data" method="post" id="form" onsubmit="send(event, 'send.php')">
+        <div class="popup">
+          <form id="form" class="form popup__wrapper" action="send.php" method="post" enctype="multipart/form-data" onsubmit="send(event, 'send.php')">
                 <div class="popup__header">
                     <p class="popup__header-text">Заполните форму для подачи заявки на разработку сайта</p>
                      <img class="popup__close"  src="/assets/img/close.svg" alt="Закрыть"> 
@@ -136,7 +136,7 @@
 
             <!--==================== SERVICES ====================-->
             <div class="popup popup__order ">
-                <form class="popup__wrapper" action="order.php"  enctype="multipart/form-data" method="post" id="form" onsubmit="send(event, 'order.php')">
+                <form class="popup__wrapper" action="order.php" enctype="multipart/form-data" method="post" id="form" onsubmit="send(event, 'order.php')">
                       <div class="popup__header">
                           <p class="popup__header-text">Заполните форму для обсуждения проекта</p>
                            <img class="popup__close order__close"  src="/assets/img/close.svg" alt="Закрыть"> 
@@ -438,7 +438,7 @@
                           
                           <div class="contact__form-group popup__group">
                             <label class="input-text " for="">Отзыв о нашей работе</label>
-                            <textarea name="" id="" class="textarea textarea__reviews" name="user_text"></textarea>
+                            <textarea id="" class="textarea textarea__reviews" name="user_text"></textarea>
                         </div>
                         <button class="btn popup__btn" type="submit">Оставить отзыв</button>
                           <div class="popup__text">Заполняя данные, вы автоматически соглашаетесь c 
@@ -471,7 +471,7 @@
                             </div>
                         </div>
                     </address>
-                    <form action="send.php" class="contact__form">
+                    <form  class="contact__form" action="send.php"  enctype="multipart/form-data" method="post" id="form" onsubmit="send(event, 'send.php')">
                         <p class="contact__form-title">Заполните форму для заказа обратного звонка</p>
                         <div class="contact__form-wrapper">
                         <div class="contact__form-left">
@@ -510,7 +510,7 @@
                             </div>
                             <div class="contact__form-comment">
                                 <p class="input-text">Комментарий к звонку</p>
-                                <textarea name="" id="" class="textarea" name="user_text">Lorem ipsum — классический текст-«рыба». Является искажённым отрывком из  философского трактата Марка Туллия Цицерона</textarea>
+                                <textarea id="" class="textarea" name="user_text">Lorem ipsum — классический текст-«рыба». Является искажённым отрывком из  философского трактата Марка Туллия Цицерона</textarea>
                             </div>
                         </div>
                     </div>
